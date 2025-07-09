@@ -1,4 +1,5 @@
-const socket = new WebSocket('wss://tictactoe-production-8384.up.railway.app');
+const socket = new WebSocket('ws://shortline.proxy.rlwy.net:45209');
+
 
 const boardEl = document.getElementById('board');
 const statusEl = document.getElementById('status');
