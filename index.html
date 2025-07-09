@@ -2,126 +2,14 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Tic Tac Toe - MEGA ROZBUDOWANA WERSJA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-    }
-
-    #board {
-      display: grid;
-      grid-template-columns: repeat(3, 120px);
-      grid-template-rows: repeat(3, 120px);
-      gap: 15px;
-      margin: 20px 0;
-      user-select: none;
-    }
-
-    .cell {
-      background: #2b2b3c;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      cursor: pointer;
-      font-size: 70px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cell:hover:not(.disabled):not(.filled) {
-      background: #764ba2;
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(118,75,162,0.7);
-    }
-
-    .cell.filled {
-      cursor: default;
-      color: #ffd700;
-      text-shadow: 0 0 12px #ffd700;
-      animation: fadeInSymbol 0.5s ease forwards;
-    }
-
-    @keyframes fadeInSymbol {
-      from {
-        opacity: 0;
-        transform: scale(0.3);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    #message {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      min-height: 2rem;
-      text-align: center;
-      padding: 10px 20px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
-      user-select: none;
-    }
-
-    #resetBtn {
-      background: #ffd700;
-      border: none;
-      border-radius: 25px;
-      padding: 12px 30px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #2b2b3c;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-
-    #resetBtn:hover {
-      background: #e6c200;
-    }
-
-    #players {
-      margin-top: 10px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-align: center;
-      text-shadow: 0 0 8px rgba(0,0,0,0.3);
-      user-select: none;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe Online</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Tic Tac Toe Multiplayer</h1>
-  <div id="players">Łączenie...</div>
-  <div id="board"></div>
-  <div id="message"></div>
-  <button id="resetBtn" disabled>Restartuj grę</button>
+  <div id="status">Łączenie z serwerem...</div>
+  <div class="board" id="board"></div>
 
   <script src="script.js"></script>
 </body>
